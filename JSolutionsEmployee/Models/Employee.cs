@@ -9,5 +9,6 @@ namespace JSolutionsEmployee.Models
         [Required]
         public string employeeName { get; set; }
         public string position { get; set; }
+        public DateTime DateHired { get; set; }
     }
 }
