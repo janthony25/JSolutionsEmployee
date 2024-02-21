@@ -15,30 +15,32 @@
 
 <table class="table table-bordered table-striped">
     <thead>
-        <tr>
-            <th class="text-white">
-                Employee Name
-            </th>
-            <th class="text-white">
-                Position
-            </th>
-               
-        </tr>
+       <tr>
+           <th class="text-white">
+               Employee Name
+           </th>
+                <th class ="text-white">
+               Position
+           </th>
+           <th></th>
+       </tr>
     </thead>
     <tbody>
-        @foreach(var obj in Model)
-        {
-            <tr>
-                    <th class="text-white">
-                    @obj.employeeName
-                </th>
-                    <th class="text-white">
-                    @obj.position
-                </th>
-                
-            </tr>
-        }
-    </tbody>
+            @foreach(var obj in Model)
+            {
+                <tr>
+                    <td class="text-white">
+                        @obj.employeeName
+                    </td>
+                    <td class="text-white">
+                        @obj.position
+                    </td>
+                    <td>
+                        <a asp-controller="Employee" asp-action="Edit" asp-route-id="@obj.employeeID">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
 
 </table>
 
