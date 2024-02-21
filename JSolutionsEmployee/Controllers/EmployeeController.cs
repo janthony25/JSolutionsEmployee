@@ -18,5 +18,21 @@ namespace JSolutionsEmployee.Controllers
             IEnumerable<Employee> obj = _db.employees;
             return View(obj);
         }
+
+        //GET
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Employee obj)
+        {
+            _db.employees.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

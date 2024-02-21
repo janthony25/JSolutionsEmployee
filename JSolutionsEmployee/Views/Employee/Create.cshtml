@@ -1,0 +1,18 @@
+﻿@model Employee
+
+<form method="post">
+    <div class="container border p-4">
+        <h2 class="text-primary mb-3">Add New Employee</h2>
+        <div class="mb-3">
+            <label asp-for="employeeName"></label>
+            <input asp-for="employeeName" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="position"></label>
+            <input asp-for="position" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a class="btn btn-secondary" asp-controller="Employee" asp-action="Index" style="width:150px">Back to List</a>
+
+    </div>
+</form>
